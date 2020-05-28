@@ -8,3 +8,7 @@ The small and straightforward app shows the annotation history of HTA2.0 transcr
 
 In brief, all available releases e.g. 33-36 were downloaded and matched by the column transcript_cluster_id. The app allows the user to search for multiple ids in the search field (of note, not all ids are shown due to speed issues). After a selection, the gene_assignment is illustrated for the id stratified by the release history. Furthermore all available columns are shown in a table at the bottom of the single-page-app.
 
+# Running application
+
+First, download the dataset here https://alioth.workupload.com/download/NpKCD7p9xmS
+Then
