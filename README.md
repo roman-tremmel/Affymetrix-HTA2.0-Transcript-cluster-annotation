@@ -10,5 +10,10 @@ In brief, all available releases e.g. 33-36 were downloaded and matched by the c
 
 # Running application
 
-First, download the dataset here https://alioth.workupload.com/download/NpKCD7p9xmS
+Get a first impression of the first 100 probes per chromosome using 
+
+    lapply(c("shiny", "tidyverse", "DT"), function(x) if(!require(x,character.only = TRUE)) install.packages(x))
+    shiny::runGitHub("roman-tremmel/Affymetrix-HTA2.0-Transcript-cluster-annotation")
+
+The full dataset can be downloaded here https://alioth.workupload.com/download/NpKCD7p9xmS. The 
 Then
