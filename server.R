@@ -40,8 +40,17 @@ output$DTS_probe_across_releases <- renderDataTable({
     bind_rows(.id = "Release") %>% 
     datatable(extensions = 'Buttons', 
               filter =  list(position = 'top', clear = TRUE),
+              callback = JS('table.page(3).draw(false);'),
               options = list(autoWidth = TRUE,
-                             dom = 'Bfrtip'))
+                             dom = 'Bfrtip',
+                             columnDefs = list(list(
+                               targets = c(9:17),
+                               render = JS(
+                                 "function(data, type, row, meta) {",
+                                 "return type === 'display' && data.length > 6 ?",
+                                 "'<span title=\"' + data + '\">' + data.substr(0, 40) + '...</span>' : data;",
+                                 "}")
+                             ))))
 })
 }
 
