@@ -15,5 +15,14 @@ Get a first impression of the first 100 probes per chromosome using
     lapply(c("shiny", "tidyverse", "DT"), function(x) if(!require(x,character.only = TRUE)) install.packages(x))
     shiny::runGitHub("roman-tremmel/Affymetrix-HTA2.0-Transcript-cluster-annotation")
 
-The full dataset can be downloaded here https://alioth.workupload.com/download/NpKCD7p9xmS. The 
-Then
+The full dataset can be downloaded here https://alioth.workupload.com/download/NpKCD7p9xmS. Download the zipped app from github, unzipp the archive and drop the downloaded `.rds` in the app directory. Then replace line 12 in the `global.R` file from  
+
+     all_data <- readRDS("HTA2.0Transcript_Cluster_Annotations_snippet.rds")
+
+to 
+
+    all_data <- readRDS("HTA2.0Transcript_Cluster_Annotations.rds")
+
+Then, open RStudio an run 
+
+    runApp("path/to/appdirectory")
